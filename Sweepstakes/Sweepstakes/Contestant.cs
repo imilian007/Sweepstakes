@@ -3,14 +3,22 @@ namespace Sweepstakes
 {
     public class Contestant
     {
-        public string firstName;
-        public string lastName;
-        public string emailAddress;
-        public double registrationNumber;
+        private string firstName;
+        private string lastName;
+        private string emailAddress;
+        private double registrationNumber;
 
-        public Contestant()
+        public Contestant(int RegistrationNumber, string FirstName, string LastName, string EmailAddress)
         {
         }
+
+        public int RegistrationNumber { get; set; }
+
+        public string FirstName { get; set; }
+
+        public string LastName { get; set; }
+
+        public string EmailAddress { get; set; }
 
         private string GetInfoString(string message)
         {

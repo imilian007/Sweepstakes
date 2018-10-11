@@ -6,5 +6,13 @@ namespace Sweepstakes
         public SweepstakesQueueManager()
         {
         }
+
+        void InsertSweepstakes(Sweepstakes sweepstakes)
+        {
+        }
+
+        Sweepstakes GetSweepstakes()
+        {
+        }
     }
 }
