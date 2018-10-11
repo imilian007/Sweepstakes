@@ -1,10 +1,10 @@
 ﻿using System;
 namespace Sweepstakes
 {
-    public class ISweepstakesManager
-    {
-        public ISweepstakesManager()
+        public interface ISweepstakesManager
         {
+            void InsertSweepstakes(Sweepstakes sweepstakes);
+
+            Sweepstakes GetSweepstakes();
         }
-    }
 }

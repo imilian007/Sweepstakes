@@ -1,18 +1,23 @@
 ﻿using System;
+using System.Collections.Generic;
 namespace Sweepstakes
 {
-    public class SweepstakesQueueManager
+    public class SweepstakesQueueManager : ISweepstakesManager
     {
+        Queue<Sweepstakes> sweepstakesQueue = new Queue<Sweepstakes>();
+
         public SweepstakesQueueManager()
         {
         }
 
-        void InsertSweepstakes(Sweepstakes sweepstakes)
+        public void InsertSweepstakes(Sweepstakes sweepstakes)
         {
+            sweepstakesQueue.Enqueue(sweepstakes);
         }
 
-        Sweepstakes GetSweepstakes()
+        public Sweepstakes GetSweepstakes()
         {
+            return sweepstakesQueue.Dequeue();
         }
     }
 }
